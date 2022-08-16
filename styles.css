@@ -46,6 +46,7 @@ header{
     position: fixed;
     top: 1rem;
     right: 1rem;
+    z-index: 5;
 }
 .logo{
     font-size: 1.7rem;
