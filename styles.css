@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+/* :root{
+    color-scheme: dark;
+} */
+*::-webkit-scrollbar{
+    width: 1rem;
+}
+*::-webkit-scrollbar-track{
+    background: #fff;
+}
+*::-webkit-scrollbar-thumb{
+    background: #070016;
+    border: 2px solid #070016;
+    height: 5rem;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* HEADER AND LANDING PAGE */
+#banner{
+    background: #070016;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+header{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    width: 3rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+.logo{
+    font-size: 1.7rem;
+    background: linear-gradient(to right,rgb(0, 174, 255),red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background: #fff;
+    transform: translateX(100%);
+    transition: .5s;
+    z-index: 2;
+}
+nav ul{
+    margin-top: 5rem;
+}
+nav ul a{
+    padding: 1.5rem 1rem;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+.close{
+    width: 2rem;
+    float: right;
+    margin: 1rem;
+    cursor: pointer;
+}
+nav ul a:hover{
+    background: rgba(128, 128, 128, 0.5);
+}
+.open-nav{
+    transform: translateX(0%);
+}
+.content{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    padding-top: 1rem ;
+    text-align: center;
+    flex-wrap: wrap;
+    animation: introload 2s ease-in forwards;
+}
+.content-text{
+    flex-basis: 100%;
+}
+.content-text p{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+.content-text span{
+    background: linear-gradient(to right,blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.content-text img{
+    width: 5rem;
+    animation: bounce 1s cubic-bezier(.5, 0.05, 1, .5) infinite alternate;
+}
+.content-img{
+    flex-basis: 100%;
+    margin: auto;
+}
+.content-img img{
+    width: 100%;
+}
+
+/* ABOUT PAGE */
+#about{
+    max-width: 100%;
+    padding: 2rem 0;
+}
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #070016;
+    text-transform: uppercase;
+}
+.about{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* color: #fff; */
+}
+.about-me{
+    flex-basis: 100%;
+}
+.about-img{
+    flex-basis: 100%;
+}
+.about-img img{
+    width: 100%;
+    margin: auto;
+}
+.about-me p{
+    margin-top: .5rem;
+    text-indent: .5rem;
+}
+.about-me ul{
+    margin-top: .5rem;
+}
+.about-me li{
+    list-style-type: square;
+}
+.about-me .no-indent{
+    text-indent: unset;
+}
+
+
+/* PROJECTS */
+#projects{
+    width: 100%;
+    padding: 2rem 0;
+    background: #0700160e;
+}
+.projects{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+.project-single{
+    flex-basis: 100%;
+    margin-bottom: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.project-single img{
+    width: 100%;
+    border-radius: .5rem;
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #07001684;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+.project-single:hover .overlay{
+    opacity: 1;
+}
+.desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bolder;
+    color: #fff;
+    /* color: #070016; */
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: .7s ease-in;
+}
+.project-single:hover .desc{
+    bottom: 45%;
+    opacity: 1;
+}
+
+/* CONTACT ME */
+#contact{
+    width: 100%;
+    padding: 2rem 0;
+}
+.contact{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.contact p{
+    font-weight: 500;
+    margin: auto;
+}
+.links{
+    margin-top: 1rem;
+}
+.links a{
+    margin: .3rem;
+}
+.links .fa{
+    font-size: 1.5rem;
+    color: #070016;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid #070016;
+    line-height: 1.34;
+    border-radius: .3rem;
+    transition:  all 200ms ease-in-out;
+}
+.links .fa:hover{
+    background: #070016;
+    color: #fff;
+    transform: translateY(-.5rem);
+}
+
+/* FOOTER */
+footer{
+    background: #07001610;
+    text-align: center;
+    padding: .3rem 0;
+}
+
+
+
+/* RESPONSIVE HEADER AND MAIN CONTENT */
+@media screen and (min-width:800px) {
+    .menu{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        width: auto;
+        height: auto;
+        background: none;
+        transform: translateX(0%);
+    }
+    nav ul{
+        margin: 0;
+        display: flex;
+    }
+    nav ul a{
+        padding: 1rem;
+        display: inline-block;
+        color: rgb(0, 174, 255);
+        font-size: 1rem;
+    }
+    nav ul a:hover{
+        background: none;
+        transform: scale(1.2);
+    }
+    .content{
+        padding-top: 8rem;
+    }
+    .content-text{
+        flex-basis: 50%;
+    }
+    .content-img{
+        flex-basis: 50%;
+    }
+    .content-img img{
+        width: 80%;
+    }
+    .content-text img{
+        width: 25%;
+    }
+    .content-text p{
+        font-size: 1.5rem;
+    }
+    .content{
+        padding-top: 3rem;
+    }
+
+    /* RESPONSIVE ABOUT PAGE*/
+    .about-me{
+        flex-basis: 60%;
+    }
+    .about-img{
+        flex-basis: 40%;
+    }
+    .about-img img{
+        width: 100%;
+    }
+    .about-me {
+        font-size: 1.3rem;
+    }
+
+    /* RESPONSIVE PROJECT PAGE */
+    .project-single{
+        flex-basis: 48%;
+    }
+    .desc{
+        font-size: 1.7rem;
+    }
+    .project-single:hover .desc {
+        bottom: 40%;
+        opacity: 1;
+    }
+
+    /* RESPONSIVE CONTACT PAGE */
+    .contact p{
+        font-size: 1.3rem;
+        /* font-weight: unset; */
+    }
+}
+
+@media screen and (min-width:760px) {
+    .content{
+        padding-top: 4rem;
+    }
+}
+
+
+@keyframes introload {
+    from {
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+        clip-path: polygon(0 0, 38% 0, 39% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes bounce{
+    from{
+        transform:translate3d(0, 0, 0)
+    }
+    to{
+        transform: translate3d(0, 20px, 0);
+    }
+}
