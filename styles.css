@@ -35,6 +35,17 @@ body{
     width: 100%;
 }
 header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+    /* border-bottom: 1px solid #070016; */
+    background: #07001670;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+.navbar {
     display: flex;
     padding: 1rem;
     justify-content: space-between;
@@ -98,7 +109,9 @@ nav ul a:hover{
     justify-content: center;
     margin: auto;
     color: #fff;
-    padding-top: 1rem ;
+    position: relative;
+    top: 15%;
+    /* padding-top: 1rem ; */
     text-align: center;
     flex-wrap: wrap;
     animation: introload 2s ease-in forwards;
@@ -297,7 +310,7 @@ footer{
     nav ul a{
         padding: 1rem;
         display: inline-block;
-        color: rgb(0, 174, 255);
+        color: rgb(250, 248, 214);
         font-size: 1rem;
     }
     nav ul a:hover{
@@ -305,7 +318,9 @@ footer{
         transform: scale(1.2);
     }
     .content{
-        padding-top: 8rem;
+        /* padding-top: 8rem; */
+        position: relative;
+        top: 18%;
     }
     .content-text{
         flex-basis: 50%;
@@ -361,7 +376,8 @@ footer{
 
 @media screen and (min-width:760px) {
     .content{
-        padding-top: 4rem;
+        /* padding-top: 4rem; */
+        top: 12%;
     }
 }
 
