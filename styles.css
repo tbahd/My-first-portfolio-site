@@ -68,6 +68,9 @@ header{
     font-weight: bold;
     text-transform: uppercase;
 }
+.logo a{
+    color: transparent;
+}
 nav{
     position: fixed;
     top: 0;
