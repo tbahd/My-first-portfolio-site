@@ -110,7 +110,8 @@ nav ul a:hover{
     margin: auto;
     color: #fff;
     position: relative;
-    top: 15%;
+    top: 50%;
+    transform: translateY(-50%);
     /* padding-top: 1rem ; */
     text-align: center;
     flex-wrap: wrap;
@@ -318,9 +319,7 @@ footer{
         transform: scale(1.2);
     }
     .content{
-        /* padding-top: 8rem; */
         position: relative;
-        top: 18%;
     }
     .content-text{
         flex-basis: 50%;
@@ -370,14 +369,16 @@ footer{
     /* RESPONSIVE CONTACT PAGE */
     .contact p{
         font-size: 1.3rem;
-        /* font-weight: unset; */
     }
 }
 
-@media screen and (min-width:760px) {
-    .content{
-        /* padding-top: 4rem; */
-        top: 12%;
+@media screen and (min-width:600px) {
+    .content-text {
+        flex-basis: 50%;
+    }
+
+    .content-img {
+        flex-basis: 50%;
     }
 }
 
