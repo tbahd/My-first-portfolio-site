@@ -135,8 +135,9 @@ nav ul a:hover{
 }
 .content-text img{
     width: 5rem;
-    animation: bounce 1s cubic-bezier(.5, 0.05, 1, .5) infinite alternate;
+    animation: bounce 2s ease-in-out infinite;
 }
+
 .content-img{
     flex-basis: 100%;
     margin: auto;
@@ -397,10 +398,15 @@ footer{
     }
 }
 @keyframes bounce{
-    from{
-        transform:translate3d(0, 0, 0)
-    }
-    to{
-        transform: translate3d(0, 20px, 0);
-    }
+    0% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(-5px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+        }
 }
